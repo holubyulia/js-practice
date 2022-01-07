@@ -116,8 +116,17 @@ function getConvertFromDollar() {
 }
 
 // Task 5
-fu
-for (let )
+function Numbers(from, to) {
+    for (let i = from; i <= to ; i++) {
+        i = from;
+
+        if (i % 5 === 0) {
+            console.log(i);}
+    }
+}       
+
+Numbers(1, 15);
+
 
 
 //Task 6
