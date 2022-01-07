@@ -92,13 +92,14 @@ function getConvertFromDollar() {
 
 // Task 5
 
-for (let i = 1; i <= 100; i++){
-    console.log([i]);
-    if (i % 3 === 1){
-       console.log (i === 'fizz') ;
-    } else if (i % 5 === 1){
-        i === 'buzz';
-    } else if (i % 3 === 1 && i % 5 === 1) {
-        i === 'fizz buzz';
+for (let i = 1; i < 100; i++){
+    if (i % 3){
+       console.log (i = 'fizz') ;
+    } else if (i % 5){
+        i = 'buzz';
+    } else if (i % 3 && i % 5) {
+        i = 'fizz buzz';
+    } else {
+        console.log(i);
     }
 }
