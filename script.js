@@ -64,11 +64,8 @@ console.log(Capacity(5,8));
 
 const CHOICE = +prompt(`Если у тебя есть доллары, а нужны гривны - введ 1 /n Если у тебя есть гривны, а нужны доллары - введи 2`)
 
-if (CHOICE === 1) { 
-   alert (`Ты получишь ${getConvertToDollar()} гривен`);
-} else {
-    alert (`Ты получишь ${getConvertToHrivna()} долларов`);
-}
+const RES = CHOICE === 1 ? alert (`Ты получишь ${getConvertToDollar()} гривен`) : alert (`Ты получишь ${getConvertToHrivna()} долларов`);
+
 
 
 function getConvertFromHrivna(){
@@ -93,3 +90,15 @@ function getConvertFromDollar() {
     return result = AMOUNT_HRIVNIA * exchange_rate_sale;
 }
 
+// Task 5
+
+for (let i = 1; i <= 100; i++){
+    console.log([i]);
+    if (i % 3 === 1){
+       console.log (i === 'fizz') ;
+    } else if (i % 5 === 1){
+        i === 'buzz';
+    } else if (i % 3 === 1 && i % 5 === 1) {
+        i === 'fizz buzz';
+    }
+}
