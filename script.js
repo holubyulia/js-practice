@@ -61,36 +61,35 @@ console.log(Capacity(5,8));
 
 // Task 4
 
-debugger;
 
-const CHOICE = +prompt('Если у тебя есть доллары, а нужны гривны - введ 1 /n Если у тебя есть гривны, а нужны доллары - введи 2')
+const CHOICE = +prompt(`Если у тебя есть доллары, а нужны гривны - введ 1 /n Если у тебя есть гривны, а нужны доллары - введи 2`)
 
 if (CHOICE === 1) { 
-   alert ('Ты получишь ${getConvertToHrivna()} гривен');
+   alert (`Ты получишь ${getConvertToDollar()} гривен`);
 } else {
-    alert ('Ты получишь ${result} гривен');
+    alert (`Ты получишь ${getConvertToHrivna()} долларов`);
 }
 
 
-function getConvertToHrivna(){
-    const AMOUNT_DOLLAR = +prompt('Введи сумму долларов, чтобы я мог посчитать');
+function getConvertFromHrivna(){
+    const AMOUNT_DOLLAR = +prompt('Введи сколько у тебя есть гривен, которые ты хочешь перевести в доллар, чтобы я мог посчитать')
+    
     if (isNaN(AMOUNT_DOLLAR) === 1) {
         return 'Что-то пошло не так - введи пожалуйста число';
     }
 
-    const exchange_rate_buy = 0.362; // 1 грн стоит долларов
-    return result = exchange_rate_buy * AMOUNT_DOLLAR;
+    const exchange_rate_buy = 0.0362; // 1 грн стоит долларов
+    return result = AMOUNT_DOLLAR * exchange_rate_buy;
 }
 
-function getConvertToDollar(AMOUNT_HRIVNIA) {
+function getConvertFromDollar() {
     
-    const AMOUNT_HRIVNIA = +prompt('Введи сумму гривен, чтобы я мог посчитать');
+    const AMOUNT_HRIVNIA = +prompt('Введи сумму долларов, которые ты хочешь перевести в гривну, чтобы я мог посчитать');
 
     if (isNaN(AMOUNT_HRIVNIA) === 1) {
         return 'Что-то пошло не так - введи пожалуйста число';
     }
     const exchange_rate_sale = 27.40; //1 доллар стоит гривен
-    return result = exchange_rate_sale * AMOUNT_HRIVNIA;
+    return result = AMOUNT_HRIVNIA * exchange_rate_sale;
 }
-
 
